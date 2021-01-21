@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+const element1 = <h1>Hello world</h1>;
+
+function Lorem() {
+  const style = { color: "green", fontSize: "24px" };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <p style={style}>
+      {element1}
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, sit?
+    </p>
   );
 }
 
-export default App;
+export default Lorem;

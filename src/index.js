@@ -1,4 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "./index.css";
+import Lorem from "./App";
+// const element = React.createElement("h1", { className: "title" }, "Hello TMS!");
 
-ReactDOM.render(<h1>Hello world</h1>, document.getElementById("root"));
+ReactDOM.render(<Lorem />, document.getElementById("root"));

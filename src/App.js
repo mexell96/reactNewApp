@@ -1,15 +1,24 @@
 import React from "react";
+import Site from "./Site";
 
-const element1 = <h1>Hello world</h1>;
+function Lorem(props) {
+  console.log(props);
 
-function Lorem() {
+  const myCustomProps = { ...props, text: "new props" };
+  console.log(myCustomProps);
+
   const style = { color: "green", fontSize: "24px" };
 
   return (
-    <p style={style}>
-      {element1}
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, sit?
-    </p>
+    <React.Fragment>
+      <div>Lorem ipsum dolor sit.</div>
+      <h1 style={style}>
+        <p>{myCustomProps.text}</p>
+      </h1>
+      <Site name="Google" />
+      <Site name="Yandex" />
+      <Site name="VK" />
+    </React.Fragment>
   );
 }
 

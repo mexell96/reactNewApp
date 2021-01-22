@@ -32,17 +32,24 @@ class Lorem extends React.Component {
   }
 
   componentDidMount() {
-    setInterval(() => this.setState({ name: "Max" }), 5000);
+    // setInterval(() => this.setState({ name: "Max" }), 5000);
+    console.log(`Mounted times: ${this.state.counter + 1}`);
+  }
+
+  componentDidUpdate() {
+    console.log(`Updates times: ${this.state.counter + 1}`);
   }
 
   handleClick = () => {
+    console.log(this.state, "First");
     this.setState((state) => ({ counter: state.counter + 1 }));
+    console.log(this.state, "Second");
   };
 
   render() {
     return (
       <React.Fragment>
-        <Site name={this.state.name} />
+        {/* <Site name={this.state.name} /> */}
         <Site name="Google" />
         <Site name="Yandex" />
         <Site name="VK" />
